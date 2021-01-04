@@ -37,6 +37,7 @@ forEach 와 map 의 차이점
 ```
 * `npm install --save prop-types`
 * `npm install --save react-router-dom`
+* `npm install node-sass@4.14`
 
 ## File management
 * src
