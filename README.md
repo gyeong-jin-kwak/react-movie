@@ -38,6 +38,8 @@ forEach 와 map 의 차이점
 * `npm install --save prop-types`
 * `npm install --save react-router-dom`
 * `npm install node-sass@4.14`
+* `npm install styled-components`
+* `npm install styled-reset`
 
 ## File management
 * src
@@ -48,9 +50,27 @@ forEach 와 map 의 차이점
 1. Folder 
 2. Router
 
+## style
+1. src > css `@import`
+2. Componets > Header 폴더화 &amp; css module 사용 `index.js` `Header.js` `style`
+3. styled component 사용
+4. styled-reset 전역 스타일을 위해 사용
+### src > css 파일 사용
+* `@import`
+### css module로 사용 (Components - Header 참고)
+* `Header.module.css` 자바스크립트로 css 주입 
+* `import styles from './Header.module.scss';`
+* `<ul className={styles.navList}>`
+* 고유의 아이디 생성
+* 캡슐화
+* scss 도 가능
+* 폴더에서 같이 관리
+### styled Component 사용
+* `npm install styled-components`
+---
+
 ## plan of screen
 - [ ] Home
 - [ ] TV show
 - [ ] Search
 - [ ] Detail
-
