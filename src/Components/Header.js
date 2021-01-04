@@ -33,7 +33,7 @@ const SLink = styled(Link)`
   height: 50px;
 `;
 
-export default withRouter(({location: { pathname } }) => (
+export default withRouter(({ location: { pathname } }) => (
   <Header>
     {/* {console.log(props)} */}
     <List>
