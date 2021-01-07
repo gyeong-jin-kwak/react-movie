@@ -80,11 +80,14 @@ forEach 와 map 의 차이점
 - [ ] Detail
 
 ## API Verbs
-- [] Now Playing (Now Playing)
-- [] UpComing (Movie)
-- [] GetPopular (TV, Movie)
-- [] Get Top rated (TV, Movie)
-- [] Airing Today (TV)
+* [참고 url](https://developers.themoviedb.org/3/getting-started/introduction)
+- [x] Now Playing (Movie)
+- [x] UpComing (Movie)
+- [x] GetPopular (TV, Movie)
+- [x] Get Top rated (TV)
+- [x] Airing Today (TV)
+- [ ] TV Show Detail
+- [ ] Movie Detail
 
 ## Database
 * [movie database](https://www.themoviedb.org/documentation/api)
