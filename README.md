@@ -40,11 +40,13 @@ forEach 와 map 의 차이점
 * `npm install node-sass@4.14`
 * `npm install styled-components`
 * `npm install styled-reset`
+* `npm install axios`
 
 ## File management
 * src
     * components
     * Routes
+    * api.js
 
 ## Step 
 1. Folder 
@@ -68,9 +70,24 @@ forEach 와 map 의 차이점
 ### styled Component 사용
 * `npm install styled-components`
 ---
+## axios
+* `create` -> `get`
 
 ## plan of screen
 - [ ] Home
 - [ ] TV show
 - [ ] Search
 - [ ] Detail
+
+## API Verbs
+- [] Now Playing (Now Playing)
+- [] UpComing (Movie)
+- [] GetPopular (TV, Movie)
+- [] Get Top rated (TV, Movie)
+- [] Airing Today (TV)
+
+## Database
+* [movie database](https://www.themoviedb.org/documentation/api)
+* id_ kgj1352 pw_ a4...
+* 프로필 - 설정 - api 
+* 357ad6a3e1369f05856eff3e04365942

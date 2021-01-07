@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from 'Components/App';
 import reportWebVitals from './reportWebVitals';
+// 확인용 import './api.js';
 
 ReactDOM.render(
   <React.StrictMode>
