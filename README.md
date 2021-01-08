@@ -84,13 +84,15 @@ forEach 와 map 의 차이점
 - [x] Now Playing (Movie)
 - [x] UpComing (Movie)
 - [x] GetPopular (TV, Movie)
+- [ ] Search (TV, Movie)
 - [x] Get Top rated (TV)
 - [x] Airing Today (TV)
-- [ ] TV Show Detail
-- [ ] Movie Detail
+- [x] TV Show Detail
+- [x] Movie Detail
 
 ## Database
 * [movie database](https://www.themoviedb.org/documentation/api)
 * id_ kgj1352 pw_ a4...
 * 프로필 - 설정 - api 
 * 357ad6a3e1369f05856eff3e04365942
+* www.youtube.com/watch?v=

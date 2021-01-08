@@ -9,15 +9,33 @@ const api = axios.create({
 });
 
 export default movieApi = {
-  nowPlaying: api.get('movie/now_playing'),
-  upcoming: api.get('movie/upcoming'),
-  popular: api.get('movie/popular')
+  nowPlaying: () => api.get('movie/now_playing'),
+  upcoming: () => api.get('movie/upcoming'),
+  popular: () => api.get('movie/popular'),
+  movieDetail: id => api.get(`movie/${id}`, {
+    params: {
+      append_to_response: 'videos'
+    }
+  }),
+  search: term => api.get('search/movie', {
+    params: {
+      query: encodeURIComponent(term)
+    }
+  })
 }
 
 export default tvApi = {
-  popular: api.get('tv/popular'),
-  topRated: api.get('tv/top_rated'),
-  airingToday: api.get('tv/airing_today')
+  popular: () => api.get('tv/popular'),
+  topRated: () => api.get('tv/top_rated'),
+  airingToday: () => api.get('tv/airing_today'),
+  tvDetail: id => api.get(`tv/${id}`, {
+    params: {
+      append_to_response: 'videos'
+    }
+  }),
+  search: term => api.get('search/tv', {
+    params: encodeURIComponent(term)
+  })
 }
 
 // 확인용 개발자도구 - network
