@@ -46,6 +46,10 @@ forEach 와 map 의 차이점
 * src
     * components
     * Routes
+        * Home (folder)
+            * index.js
+            * HomePresenter.js
+            * HomeContainer.js
     * api.js
 
 ## Step 
@@ -84,7 +88,7 @@ forEach 와 map 의 차이점
 - [x] Now Playing (Movie)
 - [x] UpComing (Movie)
 - [x] GetPopular (TV, Movie)
-- [ ] Search (TV, Movie)
+- [x] Search (TV, Movie)
 - [x] Get Top rated (TV)
 - [x] Airing Today (TV)
 - [x] TV Show Detail
