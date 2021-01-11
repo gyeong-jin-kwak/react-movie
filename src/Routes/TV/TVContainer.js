@@ -1,26 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TVPresenter from './TVPresenter';
 
-export default class extends React.Component {
-  state = {
-    popular: null,
-    topRated: null,
-    airingToday: null,
-    error: null,
-    loading: true
-  };
+export default () => {
+  let {popular, setPopular} = useState(null);
+  let {topRated, setTopRated} = useState(null);
+  let {airingToday, setAiringToday} = useState(null);
+  let {error, setError} = useState(null);
+  let {loading, setLoading} = useState(true);
 
-  render() {
-    const { popular, topRated, airingToday, error, loading } = this.state;
-
-    return(
-      <TVPresenter 
-        popular = { popular }
-        topRated = { topRated }
-        airingToday = { airingToday }
-        error = { error }
-        loading = { loading }
-      />
-    )
-  }
+  return (
+    <TVPresenter 
+      popular = { popular }
+      topRated = { topRated }
+      airingToday = { airingToday }
+      error = { error }
+      loading = { loading }
+    />
+  )
 }

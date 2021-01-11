@@ -1,26 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HomePresenter from './HomePresenter';
 
-export default class extends React.Component {
-  state = {
-    nowPlaying: null,
-    upcoming: null,
-    popular: null,
-    error: null,
-    loading: true
-  }
+export default () => {
+  let { nowPlaying, setNowPlaying } = useState(null);
+  let { upcoming, setupcoming } = useState(null);
+  let { popular, setPopular } = useState(null);
+  let { error, setError } = useState(null);
+  let { loading, setLoading } = useState(true);
 
-  render() {
-    const { nowPlaying, upcoming, popular, error, loading } = this.state;
-
-    return (
-      <HomePresenter 
-        nowPlaying = { nowPlaying }
-        upcoming = { upcoming }
-        popular = { popular }
-        error = { error }
-        loading = { loading }
-      />
-    )
-  }
+  return (
+    <HomePresenter 
+      nowPlaying = { nowPlaying }
+      upcoming = { upcoming }
+      popular = { popular }
+      error = { error }
+      loading = { loading }
+    />
+  );
 }

@@ -1,22 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DetailPresenter from './DetailPresenter';
 
-export default class extends React.Component {
-  state = {
-    result: null,
-    error: null, 
-    loading: true
-  }
+export default () => {
+  let {result, setResult} = useState(null);
+  let {error, setError} = useState(null);
+  let {loading, setLoading} = useState(true);
 
-  render() {
-    const { result, error, loading } = this.state;
-
-    return (
-      <DetailPresenter 
-        result = { result }
-        error = { error }
-        loading = { loading }
-      />
-    )
-  }
+  return (
+    <DetailPresenter 
+      result = { result }
+      error = { error }
+      loading = { loading }
+    />
+  )
 }

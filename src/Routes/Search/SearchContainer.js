@@ -1,26 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchPresenter from './SearchPresenter';
 
-export default class extends React.Component {
-  state = {
-    movieResluts: null,
-    tvResultes: null,
-    searchTerm: '',
-    error: null,
-    loading: false
-  }
+export default () => {
+  let { movieResults, setMovieResults } = useState(null);
+  let { tvResultes, setTVResults } = useState(null);
+  let { searchTerm, setSearchTerm } = useState('');
+  let { error, setError } = useState(null);
+  let { loading, setLoading } = useState(false);
 
-  render() {
-    const { movieResluts, tvResultes, searchTerm, error, loading } = this.state;
-
-    return(
-      <SearchPresenter 
-        movieResluts = { movieResluts }
-        tvResultes = { tvResultes }
-        searchTerm = { searchTerm }
-        error = { error }
-        loading = { loading }
-      />
-    )
-  }
+  return(
+    <SearchPresenter 
+      movieResults = { movieResults }
+      tvResultes = { tvResultes }
+      searchTerm = { searchTerm }
+      error = { error }
+      loading = { loading }
+    />
+  )
 }
