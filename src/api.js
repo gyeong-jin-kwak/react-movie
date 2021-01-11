@@ -8,7 +8,7 @@ const api = axios.create({
   }
 });
 
-export default movieApi = {
+const moviesApi = {
   nowPlaying: () => api.get('movie/now_playing'),
   upcoming: () => api.get('movie/upcoming'),
   popular: () => api.get('movie/popular'),
@@ -24,7 +24,7 @@ export default movieApi = {
   })
 }
 
-export default tvApi = {
+const tvApi = {
   popular: () => api.get('tv/popular'),
   topRated: () => api.get('tv/top_rated'),
   airingToday: () => api.get('tv/airing_today'),
@@ -37,6 +37,8 @@ export default tvApi = {
     params: encodeURIComponent(term)
   })
 }
+
+export { moviesApi, tvApi }
 
 // 확인용 개발자도구 - network
 // api.get('movie/popular');

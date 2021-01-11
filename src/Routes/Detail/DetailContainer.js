@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import DetailPresenter from './DetailPresenter';
 
 export default () => {
-  let {result, setResult} = useState(null);
-  let {error, setError} = useState(null);
-  let {loading, setLoading} = useState(true);
+  let [ result, setResult ] = useState(null);
+  let [ error, setError ] = useState(null);
+  let [ loading, setLoading ] = useState(true);
 
   return (
     <DetailPresenter 

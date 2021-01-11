@@ -77,6 +77,9 @@ forEach 와 map 의 차이점
 ## axios
 * `create` -> `get`
 
+## 변수명 변경하는 방법
+`const {data: {results: nowPlaying}} = await moviesApi.nowPlaying();`
+
 ## plan of screen
 - [ ] Home
 - [ ] TV show
