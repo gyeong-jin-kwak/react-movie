@@ -19,7 +19,7 @@ export default () => {
         
         setNowPlaying(nowPlaying);
         setupcoming(upcoming);
-        setPopular(popular)
+        setPopular(popular);
       } catch {
         setError("can't find movies information")
       } finally {
