@@ -28,7 +28,7 @@ const tvApi = {
   popular: () => api.get('tv/popular'),
   topRated: () => api.get('tv/top_rated'),
   airingToday: () => api.get('tv/airing_today'),
-  tvDetail: id => api.get(`tv/${id}`, {
+  showDetail: id => api.get(`tv/${id}`, {
     params: {
       append_to_response: 'videos'
     }
