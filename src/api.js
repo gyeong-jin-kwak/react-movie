@@ -34,7 +34,9 @@ const tvApi = {
     }
   }),
   search: term => api.get('search/tv', {
-    params: encodeURIComponent(term)
+    params: {
+      query: encodeURIComponent(term)
+    }
   })
 }
 
