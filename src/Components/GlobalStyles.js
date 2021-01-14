@@ -13,7 +13,7 @@ const globalStyles = createGlobalStyle`
   }
 
   body {
-    padding-top: 50px;
+    padding-top: 80px;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxgen, Ubuntu, Canta;
     font-size: 12px;
     color: #fff;
