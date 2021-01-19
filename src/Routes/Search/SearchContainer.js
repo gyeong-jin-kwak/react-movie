@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import SearchPresenter from './SearchPresenter';
 import { moviesApi, tvApi } from 'api';
 
@@ -13,10 +13,17 @@ export default () => {
   //   handleSubmit();
   // }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if(searchTerm !== ''){
       searchByTerm();
     }
+  };
+
+  const updateTerm = (e) => {
+    const { target: { value } } = e;
+    setSearchTerm(value);
+    // console.log(value);
   };
 
   const searchByTerm = async() => {
@@ -43,6 +50,7 @@ export default () => {
       error = { error }
       loading = { loading }
       handleSubmit = { handleSubmit }
+      updateTerm = { updateTerm }
     />
   )
 }
