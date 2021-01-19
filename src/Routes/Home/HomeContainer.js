@@ -15,12 +15,13 @@ export default () => {
         const {data: {results: nowPlaying}} = await moviesApi.nowPlaying();
         const {data: {results: upcoming}} = await moviesApi.upcoming();
         const {data: {results: popular}} = await moviesApi.popular();
-        // console.log(popular);
-        
+        console.log(popular); 
+
         setNowPlaying(nowPlaying);
         setupcoming(upcoming);
         setPopular(popular);
-      } catch {
+
+      } catch(e) {
         setError("can't find movies information")
       } finally {
         setLoading(false);
