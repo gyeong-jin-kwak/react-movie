@@ -31,7 +31,7 @@ export default () => {
     try {
       const {data: {results: movieResults}} = await moviesApi.search(searchTerm);
       const {data: {results: showResults}} = await tvApi.search(searchTerm);
-      // console.log(movieResults, showResults);
+      // console.log(movieResults.length, showResults.length);
 
       setMovieResults(movieResults);
       setTVResults(showResults);
