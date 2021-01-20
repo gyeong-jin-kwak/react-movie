@@ -11,13 +11,11 @@ const Text = styled.span`
     color: ${props => props.color};
 `;
 
-const Message = ({ text, color }) => {
-    return(
-        <Container>
-            <Text color={ color }>{ text }</Text>
-        </Container>
-    )
-}
+const Message = ({ text, color }) => (
+    <Container>
+        <Text color={ color }>{ text }</Text>
+    </Container>
+)
 
 Message.propTypes = {
     text: PropTypes.string.isRequired,
