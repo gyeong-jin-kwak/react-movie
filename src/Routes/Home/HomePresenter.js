@@ -21,19 +21,46 @@ const Home = ({
     <Container>
         {nowPlaying && nowPlaying.length > 0 && (
             <Section title="Now Playing">
-                {nowPlaying.map(movie => <Poster />)}
+                {nowPlaying.map(movie => (
+                    <Poster 
+                        id={ movie.id }
+                        isMovie = { true }
+                        title={ movie.original_title } 
+                        imageUrl = { movie.poster_path }
+                        year={ movie.release_date && movie.release_date.substring(0, 4) } 
+                        rating={ movie.vote_average } 
+                    />
+                ))}
             </Section>
         )}
 
         {upcoming && upcoming.length > 0 && (
             <Section title="Upcoming Movies">
-                {upcoming.map(movie => <Poster />)}
+                {upcoming.map(movie => (
+                    <Poster 
+                        id={ movie.id }
+                        isMovie = { true }
+                        title={ movie.original_title } 
+                        imageUrl = { movie.poster_path }
+                        year={ movie.release_date && movie.release_date.substring(0, 4) } 
+                        rating={ movie.vote_average } 
+                    />
+                ))}
             </Section>
         )}
 
         {popular && popular.length > 0 && (
             <Section title="Popular Movies">
-                {popular.map(movie => <Poster />)}
+                {popular.map(movie => (
+                    <Poster 
+                        id={ movie.id }
+                        isMovie = { true }
+                        title={ movie.original_title } 
+                        imageUrl = { movie.poster_path }
+                        year={ movie.release_date && movie.release_date.substring(0, 4) } 
+                        rating={ movie.vote_average } 
+                    />
+                ))}
             </Section>
         )}
 
