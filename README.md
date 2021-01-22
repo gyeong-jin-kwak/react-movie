@@ -41,6 +41,8 @@ forEach 와 map 의 차이점
 * `npm install styled-components`
 * `npm install styled-reset`
 * `npm install axios`
+* `npm install url-loader`
+* `npm install babel-loader babel-core babel-preset-es2015 --save-dev`
 
 ## File management
 * src
@@ -103,3 +105,6 @@ forEach 와 map 의 차이점
 * 프로필 - 설정 - api 
 * 357ad6a3e1369f05856eff3e04365942
 * www.youtube.com/watch?v=
+
+## file-loader
+* `npm run eject` webpack 보기
