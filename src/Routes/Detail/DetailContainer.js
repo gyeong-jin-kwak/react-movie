@@ -27,12 +27,13 @@ export default (props) => {
           ({data: result} = await tvApi.showDetail(parsedId))
         }
         console.log(result);
+        setResult(result)
 
       } catch {
         setError ("can't find anything")
       } finally {
         setLoading(false);
-        setResult();
+        // setResult();
       }
       // console.log(id);
       // console.log(isMovie);
