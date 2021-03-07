@@ -35,6 +35,7 @@ const Content = styled.div`
 const Cover = styled.div`
     width: 30%;
     height: 100%;
+    margin-right: 15px;
     background-image: url(${props => props.bgImage});
     background-position: center center;
     background-size: cover;
