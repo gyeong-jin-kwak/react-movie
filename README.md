@@ -111,3 +111,9 @@ forEach 와 map 의 차이점
 ## file-loader
 * `npm run eject` webpack 보기
 * `webpack.config.js`
+
+## Code Challenge
+- [ ] IMDB Link
+- [ ] Tabs inside of Movie / Show Details (YouTube Videos, Production Company & Countries)
+- [ ] Collections Link
+- [ ] /Collections Route
