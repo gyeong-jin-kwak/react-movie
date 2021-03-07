@@ -1,5 +1,9 @@
 # React-Movie
 
+## Setting
+* `yarn global add npx` : 업데이트 버전관리를 위해
+* `npx create-react-app`
+
 ## Fundamaentals
 * Arrow Functions 
     * `=>` return 함축
