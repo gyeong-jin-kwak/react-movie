@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import Loader from 'Components/Loader';
+import Message from 'Components/Message';
 
 const Container = styled.div`
     position: relative;
@@ -75,29 +77,60 @@ const Detail = ({
     result, 
     error, 
     loading 
-}) => loading ? <Loader /> :
-    <Container>
-        <Backdrop 
-            bgImage = {`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
-        />
-        <Content>
-            <Cover 
-                bgImage = {result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}` : require("../../assets/noPosterSmall.png")}
+}) => loading ? (
+        <>
+            <Helmet><title>Loading | Reactflix</title></Helmet>
+            <Loader />
+        </>
+    ) : (
+        error ? 
+        <Message /> : 
+        <Container>
+            <Helmet>
+                <title>{
+                    result.original_title ? 
+                    result.original_title : 
+                    result.original_name
+                } | Reactflix</title>
+            </Helmet>
+            <Backdrop 
+                bgImage = {`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
             />
-            <Data>
-                <Title>{result.original_title ? result.original_title : result.original_name}</Title>
-                <ItemContainer>
-                    <Item>{result.release_date ? result.release_date.substring(0, 4) : result.first_air_date.substring(0, 4)}</Item>
-                    <Devider>・</Devider>
-                    <Item>{result.runtime ? result.runtime : result.episode_run_time} min</Item>
-                    <Devider>・</Devider>
-                    <Item>{result.genres && result.genres.map((genre, index) => index === result.genres.length - 1 ? genre.name : `${genre.name} / ` )}</Item>
-                    <Devider>・</Devider>
-                    <Overview>{result.overview}</Overview>
-                </ItemContainer>
-            </Data>
-        </Content>
-    </Container>
+            <Content>
+                <Cover 
+                    bgImage = {result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}` : require("../../assets/noPosterSmall.png")}
+                />
+                <Data>
+                    <Title>{
+                        result.original_title ? 
+                        result.original_title : 
+                        result.original_name
+                    }</Title>
+                    <ItemContainer>
+                        <Item>{
+                            result.release_date ? 
+                            result.release_date.substring(0, 4) : 
+                            result.first_air_date.substring(0, 4)
+                        }</Item>
+                        <Devider>・</Devider>
+                        <Item>
+                            {result.runtime ?
+                            result.runtime : 
+                            result.episode_run_time} min
+                        </Item>
+                        <Devider>・</Devider>
+                        <Item>{
+                            result.genres && 
+                            result.genres.map((genre, index) => index === result.genres.length - 1 ? 
+                            genre.name : 
+                            `${genre.name} / ` )
+                        }</Item>
+                        <Overview>{result.overview}</Overview>
+                    </ItemContainer>
+                </Data>
+            </Content>
+        </Container>
+    )
 
 Detail.propTypes = {
     result: PropTypes.object,

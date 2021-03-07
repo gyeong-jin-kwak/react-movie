@@ -44,6 +44,7 @@ forEach 와 map 의 차이점
 * `npm install url-loader`
 * `npm install babel-loader babel-core babel-preset-es2015 --save-dev`
 * `npm install url-loader file-loader --save-dev`
+* `npm install react-helmet` / head를 수정하기 쉬움
 
 ## File management
 * src
