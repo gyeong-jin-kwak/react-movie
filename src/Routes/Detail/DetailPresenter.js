@@ -10,14 +10,8 @@ const Container = styled.div`
     padding: 50px;
 `
 
-const Content = styled.div`
-    display: flex;
-`
-
-const Cover = styled.div``
-
 const Backdrop = styled.div`
-    posision: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,7 +20,25 @@ const Backdrop = styled.div`
     background-position: center center;
     background-size: cover;
     filter: blur(3px);
-    opacity: 0.5
+    opacity: 0.5;
+    z-index: 0;
+`
+
+const Content = styled.div`
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+`
+
+const Cover = styled.div`
+    width: 30%;
+    height: 100%;
+    background-image: url(${props => props.bgImage});
+    background-position: center center;
+    background-size: cover;
+    border-radius: 5px;
 `
 
 const Detail = ({ 
@@ -39,7 +51,9 @@ const Detail = ({
             bgImage = {`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
         />
         <Content>
-            <Cover />
+            <Cover 
+                bgImage = {result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}` : require("../../assets/noPosterSmall.png")}
+            />
         </Content>
     </Container>
 
