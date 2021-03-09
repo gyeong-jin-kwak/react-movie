@@ -178,3 +178,12 @@ forEach 와 map 의 차이점
   - [오류해결](https://dev.to/kapi1/solved-treating-warnings-as-errors-because-of-process-env-ci-true-bk5)
 - Publish directory : build/
 - deploy site
+
+## typescript
+
+- `npx create-react-app my-app --template typescript`
+
+- 타입스크립트를 후에 추가하는 경우
+  - `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
+  - `yarn add typescript @types/node @types/react @types/react-dom @types/jest`
+  - `index.js` 를 `index.tsx`로 바꾸고 다시 시작
