@@ -187,3 +187,10 @@ forEach 와 map 의 차이점
   - `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
   - `yarn add typescript @types/node @types/react @types/react-dom @types/jest`
   - `index.js` 를 `index.tsx`로 바꾸고 다시 시작
+  - `tsc init`
+- `yarn add @types/styled-components`
+- 쓰고자 하는 모듈에 타입이 없을 경우 `tsconfig.json`
+
+```
+"noImplicitAny": true
+```
